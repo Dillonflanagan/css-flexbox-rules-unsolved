@@ -18,11 +18,13 @@ body {
 
 header {
   background-color: #121216;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 header,
 section {
-  padding: 20px 30px;
+  padding: 10px 30px;
   color: white;
 }
 
@@ -37,9 +39,17 @@ section {
 }
 
 .header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
 .logo-search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
 }
 
 .logo {
@@ -52,8 +62,9 @@ section {
 .search-bar {
   width: 400px;
   background: #1f1f27;
-  padding: 10px 20px;
+  padding: 2px 20px;
   border-radius: 20px;
+  display: flex;
 }
 
 .search-bar input {
@@ -71,6 +82,9 @@ section {
 }
 
 .options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .option {
@@ -86,7 +100,12 @@ section {
 
 .categories {
   background-color: #2b2d36;
-  padding-top: 20px;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .category {
@@ -110,7 +129,29 @@ section {
   color: #1f1f27;
 }
 
+.section-control{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #8d8ba5;
+}
+
 .view-options {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.view-option {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #8d8ba5;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 i.fa-th-list {
@@ -138,6 +179,12 @@ i.fa-th-list {
   border-radius: 8px;
   overflow: hidden;
   background-color: #2b2d36;
+  width: 250px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
 }
 
 .product img {
@@ -177,16 +224,26 @@ i.fa-th-list {
   cursor: pointer;
 }
 
+
+
 /* 👇👇👇  EDIT STYLES BENEATH  👇👇👇*/
 
 /* GRID VIEW STYLES */
 
 .grid.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  
 }
 
 .grid .product {
   width: 300px;
   padding-bottom: 30px;
+  justify-content: spa;
 }
 
 .grid .product-image-wrapper {
@@ -194,17 +251,24 @@ i.fa-th-list {
 }
 
 .grid .product-data {
-  height: 100%;
+
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .grid .product-info {
   text-align: center;
   padding: 0 20px 30px;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .grid .product-action {
   padding-top: 30px;
   border-top: 1px solid #8d8ba5;
+  text-align: center;
 }
 
 /* LINE VIEW STYLES */
